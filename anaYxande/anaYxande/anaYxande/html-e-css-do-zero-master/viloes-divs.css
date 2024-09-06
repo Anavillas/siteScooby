@@ -1,0 +1,588 @@
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0); /* Posição inicial e final */
+    }
+    50% {
+        transform: translateY(-20px); /* Movimento para cima */
+    }
+}
+
+
+
+/* BACKGROUND SIMONE  */
+#sarah-background {
+    position: absolute; /* Mude para absolute para manter o fundo fixo dentro do contêiner */
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+#sarah-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#sarah-background::after {
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute; /* Mude para absolute para manter o fundo fixo dentro do contêiner */
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 1) 15%, rgba(10, 12, 16, 0.8) 50%, rgba(10, 12, 16, 1) 85%);
+}
+
+/* Container Sarah */
+#sarah-container {
+    position: relative;
+    height: 100vh; /* Garante que o contêiner ocupe toda a altura da viewport */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do contêiner */
+}
+
+/* IMAGEM PNG SARAH */
+#sarah-png {
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Move a imagem para a esquerda */
+    width: 80%;
+    /* Ajuste o tamanho da imagem */
+    z-index: -1; /* Garante que a imagem fique atrás dos outros elementos */
+    
+}
+
+#sarah-png img {
+    width: 100%;
+    height: auto;
+    animation: moveUpDown 5s infinite ease-in-out; /* Animação aplicada */
+
+}
+
+/* TEXTO DO SARAH */
+#sarah-texto {
+    line-height: 25px;
+    font-size: 17px;
+    font-family: 'Inter', sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    transform: translateY(-50%);
+    color: white;
+    padding: 20px;
+    max-width: 50%;
+    box-sizing: border-box;
+    z-index: 1;
+    margin-top: 7%;
+}
+
+/* CARD CONTAINER SARAH */
+
+
+
+#video-container {
+    position: absolute; /* Posiciona o vídeo de forma absoluta dentro do container */
+    bottom: 15px; /* Alinha o vídeo na parte inferior do container */
+    right: 10px; /* Alinha o vídeo na parte esquerda do container */
+    width: 400px; /* Largura do vídeo */
+    height: 268px; /* Altura do vídeo */
+    z-index: 2; /* Garante que o vídeo fique acima de outros elementos */
+}
+
+/* Estilos para o vídeo */
+#video-container video {
+    width: 100%; /* Faz o vídeo ocupar toda a largura do container do vídeo */
+    height: 100%; /* Faz o vídeo ocupar toda a altura do container do vídeo */
+    object-fit: cover; /* Faz o vídeo cobrir todo o container sem distorcer */
+}
+
+#playButton {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Centraliza o botão */
+    padding: 10px 20px; 
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo meio transparente */
+    color: #fff; 
+    border: none; 
+    border-radius: 50%; /* Torna o botão circular */
+    cursor: pointer; 
+    font-size: 24px; /* Tamanho do texto do botão */
+    width: 60px; 
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#playButton:hover {
+    background-color: #dac510; /* Cor de fundo do botão ao passar o mouse */
+}
+
+
+
+
+/* BACKGROUND VIRUS */
+#virus-background {
+    position: absolute; /* Mude para absolute para manter o fundo fixo dentro do contêiner */
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+#virus-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#virus-background::after {
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute; /* Mude para absolute para manter o fundo fixo dentro do contêiner */
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 1) 15%, rgba(10, 12, 16, 0.8) 50%, rgba(10, 12, 16, 1) 85%);
+}
+
+/* Container Sarah */
+#virus-container {
+    position: relative;
+    height: 100vh; /* Garante que o contêiner ocupe toda a altura da viewport */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do contêiner */
+}
+
+#virus-png {
+    position: absolute;
+    bottom: 0;
+    left: 40%; /* Move a imagem para a esquerda */
+    width: 60%;
+    /* Ajuste o tamanho da imagem */
+    z-index: -1; /* Garante que a imagem fique atrás dos outros elementos */
+    
+}
+
+#virus-png img {
+    width: 100%;
+    height: auto;
+    animation: moveUpDown 5s infinite ease-in-out; /* Animação aplicada */
+
+    
+}
+
+/* TEXTO DO SARAH */
+#virus-texto {
+    line-height: 25px; /* Define a altura da linha para melhor legibilidade */
+    font-size: 20px; /* Define o tamanho da fonte base */
+    font-family: 'Inter', sans-serif; /* Define a fonte para o texto */
+    position: absolute;
+    top: 20%; /* Alinha o texto verticalmente */
+    right: 48%;
+    transform: translateY(-50%); /* Ajusta a posição vertical */
+    color: white;
+    padding: 20px;
+    max-width: 50%;
+    box-sizing: border-box;
+    z-index: 1; /* Garante que o texto fique acima da imagem */
+    margin-top: 7%;
+}
+
+
+
+
+
+#video-virus-container {
+    position: absolute; /* Posiciona o vídeo de forma absoluta dentro do container */
+    bottom: 15px; /* Alinha o vídeo na parte inferior do container */
+    right: 68%; /* Alinha o vídeo na parte esquerda do container */
+    width: 400px; /* Largura do vídeo */
+    height: 268px; /* Altura do vídeo */
+    z-index: 2; /* Garante que o vídeo fique acima de outros elementos */
+}
+
+/* Estilos para o vídeo */
+#video-virus-container video {
+    width: 100%; /* Faz o vídeo ocupar toda a largura do container do vídeo */
+    height: 100%; /* Faz o vídeo ocupar toda a altura do container do vídeo */
+    object-fit: cover; /* Faz o vídeo cobrir todo o container sem distorcer */
+}
+
+
+#playButton-virus {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Centraliza o botão */
+    padding: 10px 20px; 
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo meio transparente */
+    color: #fff; 
+    border: none; 
+    border-radius: 50%; /* Torna o botão circular */
+    cursor: pointer; 
+    font-size: 24px; /* Tamanho do texto do botão */
+    width: 60px; 
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#playButton-virus:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+
+
+/* BACKGROUND CLEOPATRA */
+#cleo-background {
+    position: absolute; /* Mude para absolute para manter o fundo fixo dentro do contêiner */
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+#cleo-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#cleo-background::after {
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute; /* Mude para absolute para manter o fundo fixo dentro do contêiner */
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 1) 15%, rgba(10, 12, 16, 0.8) 50%, rgba(10, 12, 16, 1) 85%);
+}
+
+/* Container Sarah */
+#cleo-container {
+    position: relative;
+    height: 100vh; /* Garante que o contêiner ocupe toda a altura da viewport */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do contêiner */
+}
+
+/* IMAGEM PNG SARAH */
+#cleo-png {
+    position: absolute;
+    bottom: 0;
+    left: 0%; /* Move a imagem para a esquerda */
+    width: 50%;
+    /* Ajuste o tamanho da imagem */
+    z-index: -1; /* Garante que a imagem fique atrás dos outros elementos */
+    
+}
+
+#cleo-png img {
+    width: 100%;
+    height: auto;
+    animation: moveUpDown 5s infinite ease-in-out; /* Animação aplicada */
+
+}
+
+/* TEXTO DO SARAH */
+#cleo-texto {
+    line-height: 25px;
+    font-size: 17px;
+    font-family: 'Inter', sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    transform: translateY(-50%);
+    color: white;
+    padding: 20px;
+    max-width: 50%;
+    box-sizing: border-box;
+    z-index: 1;
+    margin-top: 7%;
+}
+
+
+
+
+
+
+#video-cleo-container {
+    position: absolute; /* Posiciona o vídeo de forma absoluta dentro do container */
+    bottom: 15px; /* Alinha o vídeo na parte inferior do container */
+    right: 10px; /* Alinha o vídeo na parte esquerda do container */
+    width: 400px; /* Largura do vídeo */
+    height: 268px; /* Altura do vídeo */
+    z-index: 2; /* Garante que o vídeo fique acima de outros elementos */
+}
+
+/* Estilos para o vídeo */
+#video-cleo-container video {
+    width: 100%; /* Faz o vídeo ocupar toda a largura do container do vídeo */
+    height: 100%; /* Faz o vídeo ocupar toda a altura do container do vídeo */
+    object-fit: cover; /* Faz o vídeo cobrir todo o container sem distorcer */
+}
+
+
+#playButton-cleo {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Centraliza o botão */
+    padding: 10px 20px; 
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo meio transparente */
+    color: #fff; 
+    border: none; 
+    border-radius: 50%; /* Torna o botão circular */
+    cursor: pointer; 
+    font-size: 24px; /* Tamanho do texto do botão */
+    width: 60px; 
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#playButton-cleo:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+
+
+/* BACKGROUND RAVENCROFT */
+#raven-background {
+    position: absolute; /* Mude para absolute para manter o fundo fixo dentro do contêiner */
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+#raven-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#raven-background::after {
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute; /* Mude para absolute para manter o fundo fixo dentro do contêiner */
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 1) 15%, rgba(10, 12, 16, 0.8) 50%, rgba(10, 12, 16, 1) 85%);
+}
+
+/* Container Sarah */
+#raven-container {
+    position: relative;
+    height: 100vh; /* Garante que o contêiner ocupe toda a altura da viewport */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do contêiner */
+}
+
+/* IMAGEM PNG SARAH */
+#raven-png {
+    position: absolute;
+    bottom: 0;
+    left: 0%; /* Move a imagem para a esquerda */
+    width: 50%;
+    /* Ajuste o tamanho da imagem */
+    z-index: -1; /* Garante que a imagem fique atrás dos outros elementos */
+    
+}
+
+#raven-png img {
+    width: 100%;
+    height: auto;
+    animation: moveUpDown 5s infinite ease-in-out; /* Animação aplicada */
+
+}
+
+/* TEXTO DO SARAH */
+#raven-texto {
+    line-height: 25px;
+    font-size: 17px;
+    font-family: 'Inter', sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    transform: translateY(-50%);
+    color: white;
+    padding: 20px;
+    max-width: 50%;
+    box-sizing: border-box;
+    z-index: 1;
+    margin-top: 7%;
+}
+
+
+#video-raven-container {
+    position: absolute; /* Posiciona o vídeo de forma absoluta dentro do container */
+    bottom: 15px; /* Alinha o vídeo na parte inferior do container */
+    right: 10px; /* Alinha o vídeo na parte esquerda do container */
+    width: 400px; /* Largura do vídeo */
+    height: 268px; /* Altura do vídeo */
+    z-index: 2; /* Garante que o vídeo fique acima de outros elementos */
+}
+
+/* Estilos para o vídeo */
+#video-raven-container video {
+    width: 100%; /* Faz o vídeo ocupar toda a largura do container do vídeo */
+    height: 100%; /* Faz o vídeo ocupar toda a altura do container do vídeo */
+    object-fit: cover; /* Faz o vídeo cobrir todo o container sem distorcer */
+}
+
+
+#playButton-raven {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Centraliza o botão */
+    padding: 10px 20px; 
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo meio transparente */
+    color: #fff; 
+    border: none; 
+    border-radius: 50%; /* Torna o botão circular */
+    cursor: pointer; 
+    font-size: 24px; /* Tamanho do texto do botão */
+    width: 60px; 
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#playButton-raven:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* BACKGROUND PERICLES */
+#pericles-background {
+    position: absolute; /* Mude para absolute para manter o fundo fixo dentro do contêiner */
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+#pericles-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#pericles-background::after {
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute; /* Mude para absolute para manter o fundo fixo dentro do contêiner */
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 1) 15%, rgba(10, 12, 16, 0.8) 50%, rgba(10, 12, 16, 1) 85%);
+}
+
+/* Container Sarah */
+#pericles-container {
+    position: relative;
+    height: 100vh; /* Garante que o contêiner ocupe toda a altura da viewport */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do contêiner */
+}
+
+/* IMAGEM PNG SARAH */
+#pericles-png {
+    position: absolute;
+    bottom: 0;
+    left: 60%; /* Move a imagem para a esquerda */
+    width: 40%;
+    /* Ajuste o tamanho da imagem */
+    z-index: -1; /* Garante que a imagem fique atrás dos outros elementos */
+    
+}
+
+#pericles-png img {
+    width: 100%;
+    height: auto;
+    animation: moveUpDown 5s infinite ease-in-out; /* Animação aplicada */
+
+}
+
+/* TEXTO DO SARAH */
+#pericles-texto {
+    line-height: 25px; /* Define a altura da linha para melhor legibilidade */
+    font-size: 20px; /* Define o tamanho da fonte base */
+    font-family: 'Inter', sans-serif; /* Define a fonte para o texto */
+    position: absolute;
+    top: 20%; /* Alinha o texto verticalmente */
+    right: 48%;
+    transform: translateY(-50%); /* Ajusta a posição vertical */
+    color: white;
+    padding: 20px;
+    max-width: 50%;
+    box-sizing: border-box;
+    z-index: 1; /* Garante que o texto fique acima da imagem */
+    margin-top: 7%;
+}
+
+
+
+
+
+#video-pericles-container {
+    position: absolute; /* Posiciona o vídeo de forma absoluta dentro do container */
+    bottom: 15px; /* Alinha o vídeo na parte inferior do container */
+    right: 68%; /* Alinha o vídeo na parte esquerda do container */
+    width: 400px; /* Largura do vídeo */
+    height: 268px; /* Altura do vídeo */
+    z-index: 2; /* Garante que o vídeo fique acima de outros elementos */
+}
+
+/* Estilos para o vídeo */
+#video-pericles-container video {
+    width: 100%; /* Faz o vídeo ocupar toda a largura do container do vídeo */
+    height: 100%; /* Faz o vídeo ocupar toda a altura do container do vídeo */
+    object-fit: cover; /* Faz o vídeo cobrir todo o container sem distorcer */
+}
+
+
+#playButton-pericles {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Centraliza o botão */
+    padding: 10px 20px; 
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo meio transparente */
+    color: #fff; 
+    border: none; 
+    border-radius: 50%; /* Torna o botão circular */
+    cursor: pointer; 
+    font-size: 24px; /* Tamanho do texto do botão */
+    width: 60px; 
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#playButton-pericles:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Aumenta a opacidade ao passar o mouse */
+}
+
+
+#sarah-container, #virus-container, #cleo-container, #raven-container {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#Sarah-container h1 {
+    color: #fa0000; /* Substitua com a cor desejada */
+  }
+
+  #virus-container h1 {
+    color: #00c0fa; /* Substitua com a cor desejada */
+  }
+
+  #cleo-container h1 {
+    color: #e9fa00; /* Substitua com a cor desejada */
+  }
+
+  #pericles-container h1 {
+    color: #fa00d9; /* Substitua com a cor desejada */
+  }
+
+  #raven-container h1 {
+    color: #00eeff; /* Substitua com a cor desejada */
+  }

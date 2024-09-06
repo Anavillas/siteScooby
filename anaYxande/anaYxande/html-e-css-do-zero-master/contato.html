@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <!-- Define o charset e compatibilidade -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Título da página -->
+  <title>Contato - Chatschool</title>
+
+  <!-- Links para fontes e ícones -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Link para o arquivo CSS -->
+  <link href="css/pages/contato.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header id="header" class="page-contato">
+    <div class="container">
+      <div class="row">
+        <!-- Logo -->
+        <div class="col col-desktop-3 col-6">
+          <a href="index.html">
+            <img src="images/logo.png" alt="Logo da Chatschool">
+          </a>
+        </div>
+
+        <!-- Navegação -->
+        <div class="col col-desktop-9 col-6">
+          <nav>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="quem-somos.html">Quem somos</a></li>
+              <li><a href="clientes.html">Clientes</a></li>
+              <li><a href="equipe.html">Equipe</a></li>
+              <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Título principal -->
+      <div class="row">
+        <div class="col col-desktop-12 title">
+          <h1>Alta produtividade em tempo real</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section class="section section-center">
+      <h2>Contato</h2>
+      <p class="subtitle">
+        Lorem ipsum dolor sit amet. Proin gravida nibh vel velit auctor aliquet. Lorem ipsum dolor sit amet.<br>
+        Lorem ipsum dolor sit amet. Proin gravida nibh vel velit auctor aliquet.
+      </p>
+
+      <div class="container">
+        <!-- Formulário de contato -->
+        <!-- https://github.com/dwyl/html-form-send-email-via-google-script-without-server -->
+        <form action="https://script.google.com/macros/s/AKfycbzwr5wrIL9yQUw3Lh83wjqIw05peunLi-iUHiNVMgQ9WgXbj3AM/exec" class="row" method="post">
+          <!-- Informações de contato -->
+          <div class="col col-desktop-6 col-6">
+            <div class="input-control">
+              <input id="nome" name="nome" type="text" required placeholder="Nome...">
+              <label for="nome">Nome*</label>
+            </div>
+            <div class="input-control">
+              <input id="email" name="email" type="email" required placeholder="Email...">
+              <label for="email">Email*</label>
+            </div>
+            <div class="input-control">
+              <input id="telefone" name="telefone" type="number" placeholder="Telefone...">
+              <label for="telefone">Telefone</label>
+            </div>
+          </div>
+
+          <!-- Mensagem -->
+          <div class="col col-desktop-6 col-6">
+            <div class="input-control">
+              <textarea id="mensagem" name="mensagem" cols="30" rows="10" placeholder="Mensagem..."></textarea>
+              <label for="mensagem">Mensagem</label>
+            </div>
+          </div>
+
+          <!-- Botão de envio -->
+          <div class="col col-desktop-12 col-6">
+            <input type="submit" value="Enviar" class="btn orange">
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <!-- Informações sobre a empresa -->
+        <div class="col col-offset-desktop-1 col-desktop-3">
+          <p><a href=""><img src="images/logo.png" alt="Logo da Chatschool"></a></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla mollis erat, vitae pulvinar nisi laoreet eget. Curabitur at arcu mi. Cras vitae pharetra mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed id felis leo. Maecenas est est, vulputate at congue non, pulvinar eu arcu.</p>
+        </div>
+
+        <!-- Menu de navegação do rodapé -->
+        <div class="col col-offset-desktop-1 col-desktop-2 col-2">
+          <h3>Menu</h3>
+          <nav>
+            <ul>
+              <li><a href="/" class="active">Home</a></li>
+              <li><a href="quem-somos.html">Quem somos</a></li>
+              <li><a href="clientes.html">Clientes</a></li>
+              <li><a href="equipe.html">Equipe</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Links para redes sociais -->
+        <div class="col col-desktop-3 social col-4">
+          <a href=""><img src="images/social-facebook.png" alt="Facebook"></a>
+          <a href=""><img src="images/social-twitter.png" alt="Twitter"></a>
+          <a href=""><img src="images/social-youtube.png" alt="YouTube"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Direitos autorais -->
+  <div id="copyright">
+    &copy; Chatschool - 2017 - Todos os direitos reservados
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+    // Script para enviar o formulário via AJAX
+    $('form').submit(function (event) {
+      event.preventDefault(); // Evita o comportamento padrão do formulário
+      $('form input[type="submit"]').val('Aguarde...')
+          .attr('disabled', true); // Desativa o botão de envio e muda o texto
+      $.ajax({
+        type: $('form').attr('method'), // Método do formulário (POST)
+        url: $('form').attr('action'), // URL para onde os dados serão enviados
+        data: $('form').serialize(), // Dados do formulário
+        success: function () {
+          alert('Email enviado com sucesso'); // Alerta de sucesso
+          $('form').trigger('reset'); // Limpa o formulário
+
+          // Reativa o botão de envio e redefine o texto
+          $('form input[type="submit"]').val('Enviar')
+          .attr('disabled', false);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

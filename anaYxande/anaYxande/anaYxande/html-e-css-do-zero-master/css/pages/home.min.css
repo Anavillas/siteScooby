@@ -1,0 +1,379 @@
+/* Importa o arquivo de estilos principal */
+@import url('../styles.css');
+
+/* Regras gerais */
+* {
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura dos elementos */
+}
+
+a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px; /* Tamanho da fonte padrão */
+    font-family: 'Inter', sans-serif; /* Fonte padrão */
+    color: #B0DD38; /* Cor do texto padrão */
+    line-height: 25px; /* Altura da linha padrão */
+}
+
+p {
+    margin: 10px 0; /* Margem acima e abaixo dos parágrafos */
+}
+
+.flex{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex div{
+    width: 30%;
+   
+}
+.flex div p{
+    padding-top: 100px;
+    text-align: left;
+    font-size: 32px;
+    font-weight: 100;
+}
+.flex div span{
+    font-weight: 600;
+    color: #B0DD38;
+}
+/* Tamanho da logo */
+.logo_scby{
+    width: 312px;
+    height: 104px;
+}
+/* Layout de colunas */
+.container, .container-fluid {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row:before, .row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.col {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 1px;
+    float: left;
+}
+
+/* Colunas de tamanho fixo */
+.col-1 { width: 16.666666%; }
+.col-2 { width: 33.333332%; }
+.col-3 { width: 49.999998%; }
+.col-4 { width: 66.666664%; }
+.col-5 { width: 83.33333%; }
+.col-6 { width: 100%; }
+
+/* Colunas para desktop (min-width: 992px) */
+@media (min-width: 992px) {
+    .container {
+        max-width: 992px;
+        margin: 0 auto;
+    }
+
+    .col-desktop-1 { width: 8.333333%; }
+    .col-desktop-2 { width: 16.66%; }
+    .col-desktop-3 { width: 24.999999%; }
+    .col-desktop-4 { width: 33.333332%; }
+    .col-desktop-5 { width: 41.666665%; }
+    .col-desktop-6 { width: 49.999998%; }
+    .col-desktop-7 { width: 58.333331%; }
+    .col-desktop-8 { width: 66.666664%; }
+    .col-desktop-9 { width: 74.999997%; }
+    .col-desktop-10 { width: 83.33333%; }
+    .col-desktop-11 { width: 91.666663%; }
+    .col-desktop-12 { width: 100%; }
+
+    .col-offset-desktop-1 { margin-left: 8.333333%; }
+    .col-offset-desktop-2 { margin-left: 16.66%; }
+    .col-offset-desktop-3 { margin-left: 24.999999%; }
+    .col-offset-desktop-4 { margin-left: 33.333332%; }
+    .col-offset-desktop-5 { margin-left: 41.666665%; }
+    .col-offset-desktop-6 { margin-left: 49.999998%; }
+    .col-offset-desktop-7 { margin-left: 58.333331%; }
+    .col-offset-desktop-8 { margin-left: 66.666664%; }
+    .col-offset-desktop-9 { margin-left: 74.999997%; }
+    .col-offset-desktop-10 { margin-left: 83.33333%; }
+    .col-offset-desktop-11 { margin-left: 91.666663%; }
+    .col-offset-desktop-12 { margin-left: 100%; }
+}
+
+/* Colunas para telas maiores (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* Botões */
+.btn {
+    background-color: rgb(84, 209, 84); /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    display: inline-block;
+    border-radius: 30px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: ease .5s all; /* Transição suave para mudanças de estado */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Muda o cursor para pointer ao passar sobre o botão */
+}
+
+.btn:hover {
+    background-color: rgb(84, 180, 84); /* Cor de fundo ao passar o mouse */
+}
+
+.btn.orange {
+    background-color: #fed136; /* Cor de fundo para botões laranja */
+}
+
+.btn.orange:hover {
+    background-color: black; /* Cor de fundo ao passar o mouse para botões laranja */
+}
+
+/* Estilo dos títulos */
+h2 {
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    font-weight: 600; /* Define o peso da fonte */
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 25px; /* Tamanho da fonte */
+    margin: 10px 0 20px 0; /* Margem ao redor do título */
+}
+
+
+
+.subtitle {
+    margin-bottom: 80px; /* Margem abaixo do subtítulo */
+}
+
+.text-left {
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Ícones e imagens */
+.icon-container {
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    background: #e1f3e1; /* Cor de fundo */
+    border-radius: 30px; /* Bordas arredondadas */
+    position: relative;
+}
+
+.icon-container .material-icons {
+    display: block;
+    font-size: 85px; /* Tamanho da fonte dos ícones */
+    color: rgb(84, 209, 84); /* Cor dos ícones */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o ícone */
+    cursor: default; /* Muda o cursor para padrão */
+}
+
+.img-box-round {
+    display: inline-block;
+    border-radius: 100%; /* Bordas totalmente arredondadas */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa o limite do container */
+}
+
+.img-box-label:before {
+    content: '';
+    display: block;
+    width: 50%; /* Largura da linha vertical */
+    height: 60px; /* Altura da linha vertical */
+    border-right: 2px solid rgb(70, 211, 70); /* Borda da linha vertical */
+    background: transparent; /* Cor de fundo transparente */
+    margin-bottom: 10px; /* Margem abaixo da linha vertical */
+}
+
+/* Navegação */
+nav ul, nav ul li {
+    list-style: none; /* Remove os marcadores das listas */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do cabeçalho */
+#header {
+    background: linear-gradient(to bottom, #B0DD38, #B0DD38, #B0DD38, #4E3CCF); /* Imagem de fundo */
+    background-size: cover; /* Ajusta a imagem de fundo */
+    color: #6D3991; /* Cor do texto */
+    font-size: 24px;
+    width: 100%;
+    height: 1024px; /* Altura do cabeçalho */
+    position: relative; /* Posicionamento relativo */
+    padding-top: 30px; /* Espaçamento superior */
+}
+
+#header .btn {
+    font-size: px; /* Tamanho da fonte dos botões no cabeçalho */
+    padding: 10px 30px; /* Espaçamento interno dos botões no cabeçalho */
+}
+
+#header .btn:hover {
+    background-color: rgb(84, 180, 84); /* Cor de fundo ao passar o mouse */
+}
+
+#header nav a {
+    display: inline-block;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 10px;
+    border-radius: 5px; /* Bordas arredondadas dos links */
+}
+
+#header nav a:hover, #header nav a.active {
+    background-color: rgba(84, 209, 84, 0.3); /* Cor de fundo ao passar o mouse ou ativo */
+}
+
+#header h1 {
+    font-size: 54px; /* Tamanho da fonte do título no cabeçalho */
+    line-height: 60px; /* Altura da linha do título no cabeçalho */
+}
+
+#header a {
+    color: #786AF8; /* Cor dos links no cabeçalho */
+    transition: ease .5s all; /* Transição suave para mudanças de estado */
+}
+
+#header nav {
+    text-align: right; /* Alinha a navegação à direita */
+    font-weight: 600;
+    font-size: 24px;
+}
+
+#header nav ul, #header nav ul li {
+    display: inline-block; /* Exibe os itens de navegação em linha */
+}
+
+#header .title {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%); /* Centraliza verticalmente o título */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Seções */
+.section {
+    padding: 30px 0; /* Espaçamento superior e inferior das seções */
+}
+
+.section-center {
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Rodapé */
+#footer {
+    background-color: rgb(51, 51, 51); /* Cor de fundo do rodapé */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+#footer, #footer a {
+    color: rgb(204, 204, 204); /* Cor do texto e links no rodapé */
+}
+
+#footer h3, #footer nav li {
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+#footer h3:after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid rgb(204, 204, 204); /* Linha abaixo do título no rodapé */
+    width: 30px; /* Largura da linha */
+}
+
+#footer nav li {
+    padding: 3px 0; /* Espaçamento acima e abaixo dos itens de navegação no rodapé */
+}
+
+#footer nav li a:hover {
+    color: rgb(255, 255, 255); /* Cor do texto ao passar o mouse sobre os links */
+}
+
+#footer .social {
+    height: 200px; /* Altura do contêiner de redes sociais */
+    line-height: 200px; /* Altura da linha do contêiner de redes sociais */
+    text-align: right; /* Alinha o texto à direita */
+}
+
+#footer .social a {
+    display: inline-block;
+    padding: 0 0 0 10px; /* Espaçamento interno dos links de redes sociais */
+    opacity: 1; /* Opacidade dos links */
+}
+
+#footer .social a:hover {
+    opacity: 0.5; /* Opacidade ao passar o mouse sobre os links */
+    transition: ease .3s all; /* Transição suave para mudanças de estado */
+}
+
+#footer .social img {
+    vertical-align: middle; /* Alinha verticalmente as imagens */
+}
+
+#copyright {
+    text-align: center; /* Alinha o texto ao centro */
+    background-color: rgb(34, 34, 34); /* Cor de fundo do copyright */
+    padding: 10px; /* Espaçamento interno do copyright */
+}
+
+
+#customers {
+    background-color: rgb(242, 242, 242); /* Cor de fundo da seção de clientes */
+}
+
+#customers .btn {
+    margin-top: 80px; /* Espaçamento acima do botão */
+    background-color: rgb(220, 220, 220); /* Cor de fundo do botão */
+    color: rgb(130, 130, 130); /* Cor do texto do botão */
+}
+
+#customers .btn:hover {
+    background-color: rgb(130, 130, 130); /* Cor de fundo ao passar o mouse */
+    color: rgb(220, 220, 220); /* Cor do texto ao passar o mouse */
+}
+
+#customers .btn .material-icons {
+    vertical-align: middle; /* Alinha verticalmente os ícones */
+    font-size: 16px; /* Tamanho da fonte dos ícones */
+}
+
+#customers .container {
+    max-width: 1000px; /* Largura máxima do contêiner */
+}
+
+#team {
+    background: linear-gradient(to bottom, #171616, #172847, #171616); /* Cor de fundo da seção de equipe */
+    color: white; /* Cor do texto */
+}
+
+
+#team .img-box-round {
+    width: 120px; /* Largura da caixa de imagem redonda */
+    height: 120px; /* Altura da caixa de imagem redonda */
+}
+#how-it-work{
+    background: linear-gradient(to bottom, #4E3CCF, #171616 );
+}
+

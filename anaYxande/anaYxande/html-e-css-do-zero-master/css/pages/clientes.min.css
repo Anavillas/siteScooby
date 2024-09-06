@@ -1,0 +1,398 @@
+/*
+    Prioridade de seletores:
+    id > class > tag > ordem
+*/
+
+/* Reset básico e configurações globais */
+* {
+    box-sizing: border-box; /* Inclui padding e bordas na largura e altura dos elementos */
+}
+
+a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+body {
+    margin: 0; /* Remove a margem padrão do body */
+    padding: 0; /* Remove o padding padrão do body */
+    font-size: 14px; /* Define o tamanho da fonte base */
+    font-family: 'Inter', sans-serif; /* Define a fonte para o texto */
+    color: rgb(130, 130, 130); /* Define a cor do texto */
+    line-height: 25px; /* Define a altura da linha para melhor legibilidade */
+}
+
+p {
+    margin: 10px 0; /* Define a margem superior e inferior dos parágrafos */
+}
+
+
+.flex{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex div{
+    width: 40%;
+   
+}
+.flex div p{
+    padding-top: 100px;
+    text-align: left;
+    font-size: 32px;
+    font-weight: 5;
+    color: #fff;
+}
+.flex div span{
+    font-weight: 600;
+}
+/* Estilos para o logo */
+.logo_scby {
+    width: 312px; /* Largura do logo */
+    height: 104px; /* Altura do logo */
+}
+
+/* Layout do container e grid */
+.container,
+.container-fluid {
+    width: 100%; /* Define a largura do contêiner como 100% */
+    padding-left: 15px; /* Adiciona padding à esquerda */
+    padding-right: 15px; /* Adiciona padding à direita */
+}
+
+.row {
+    margin-left: -15px; /* Ajusta a margem esquerda para alinhar com o padding do contêiner */
+    margin-right: -15px; /* Ajusta a margem direita para alinhar com o padding do contêiner */
+}
+
+.row:before,
+.row:after {
+    content: " "; /* Adiciona um espaço vazio */
+    display: table; /* Força o elemento a se comportar como uma tabela */
+}
+
+.row:after {
+    clear: both; /* Limpa os floats dentro do elemento .row */
+}
+
+/* Estilos para colunas padrão */
+.col {
+    position: relative; /* Permite posicionamento relativo dentro da coluna */
+    padding-left: 15px; /* Adiciona padding à esquerda */
+    padding-right: 15px; /* Adiciona padding à direita */
+    min-height: 1px; /* Define a altura mínima para a coluna */
+    float: left; /* Faz as colunas flutuarem para a esquerda */
+}
+
+/* Grid para dispositivos móveis */
+.col-1 { width: 16.666666%; }
+.col-2 { width: 33.333332%; }
+.col-3 { width: 49.999998%; }
+.col-4 { width: 66.666664%; }
+.col-5 { width: 83.33333%; }
+.col-6 { width: 100%; }
+
+/* Grid para dispositivos desktop */
+@media (min-width: 992px) {
+    .container {
+        max-width: 992px; /* Define a largura máxima do contêiner em telas grandes */
+        margin: 0 auto; /* Centraliza o contêiner */
+    }
+
+    /* Colunas para desktops */
+    .col-desktop-1 { width: 8.333333%; }
+    .col-desktop-2 { width: 16.66%; }
+    .col-desktop-3 { width: 24.999999%; }
+    .col-desktop-4 { width: 33.333332%; }
+    .col-desktop-5 { width: 41.666665%; }
+    .col-desktop-6 { width: 49.999998%; }
+    .col-desktop-7 { width: 58.333331%; }
+    .col-desktop-8 { width: 66.666664%; }
+    .col-desktop-9 { width: 74.999997%; }
+    .col-desktop-10 { width: 83.33333%; }
+    .col-desktop-11 { width: 91.666663%; }
+    .col-desktop-12 { width: 100%; }
+
+    /* Deslocamentos das colunas */
+    .col-offset-desktop-1 { margin-left: 8.333333%; }
+    .col-offset-desktop-2 { margin-left: 16.66%; }
+    .col-offset-desktop-3 { margin-left: 24.999999%; }
+    .col-offset-desktop-4 { margin-left: 33.333332%; }
+    .col-offset-desktop-5 { margin-left: 41.666665%; }
+    .col-offset-desktop-6 { margin-left: 49.999998%; }
+    .col-offset-desktop-7 { margin-left: 58.333331%; }
+    .col-offset-desktop-8 { margin-left: 66.666664%; }
+    .col-offset-desktop-9 { margin-left: 74.999997%; }
+    .col-offset-desktop-10 { margin-left: 83.33333%; }
+    .col-offset-desktop-11 { margin-left: 91.666663%; }
+    .col-offset-desktop-12 { margin-left: 100%; }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px; /* Define a largura máxima do contêiner em telas extra grandes */
+    }
+}
+
+/* Estilos para botões */
+.btn {
+    background-color: rgb(209, 84, 84); /* Cor de fundo dos botões */
+    color: #fff; /* Cor do texto dos botões */
+    display: inline-block; /* Faz os botões se comportarem como blocos em linha */
+    border-radius: 30px; /* Arredonda os cantos dos botões */
+    padding: 10px 20px; /* Adiciona padding interno aos botões */
+    text-decoration: none; /* Remove o sublinhado dos botões */
+    transition: ease .5s all; /* Define a transição para efeitos de hover */
+    border: none; /* Remove a borda padrão dos botões */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre o botão */
+}
+
+.btn:hover {
+    background-color: rgb(84, 180, 84); /* Cor de fundo do botão ao passar o mouse */
+}
+
+.btn.orange {
+    background-color: #fed136; /* Cor de fundo para o botão com a classe .orange */
+}
+
+.btn.orange:hover {
+    background-color: black; /* Cor de fundo do botão com a classe .orange ao passar o mouse */
+}
+
+/* Estilos para títulos e textos */
+h2 {
+    text-transform: uppercase; /* Transforma o texto dos títulos em maiúsculas */
+    font-weight: normal; /* Define o peso da fonte para normal */
+    text-align: center; /* Alinha os títulos ao centro */
+    font-size: 25px; /* Define o tamanho da fonte dos títulos */
+    margin: 10px 0 20px 0; /* Define a margem dos títulos */
+}
+
+h2:after {
+    content: ''; /* Adiciona um conteúdo vazio */
+    display: block; /* Faz o pseudo-elemento se comportar como um bloco */
+    background-color: rgb(130, 130, 130); /* Define a cor de fundo do pseudo-elemento */
+    margin: 5px auto 0 auto; /* Centraliza e define a margem do pseudo-elemento */
+    width: 50px; /* Define a largura do pseudo-elemento */
+    height: 2px; /* Define a altura do pseudo-elemento */
+}
+
+.subtitle {
+    margin-bottom: 80px; /* Define a margem inferior para a classe .subtitle */
+}
+
+.text-left {
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilos para ícones e containers específicos */
+.icon-container {
+    display: inline-block; /* Faz o container se comportar como bloco em linha */
+    width: 140px; /* Define a largura do container do ícone */
+    height: 140px; /* Define a altura do container do ícone */
+    background: #e1f3e1; /* Define a cor de fundo do container do ícone */
+    border-radius: 30px; /* Arredonda os cantos do container do ícone */
+    position: relative; /* Permite o posicionamento absoluto de elementos filhos */
+}
+
+.icon-container .material-icons {
+    display: block; /* Faz o ícone se comportar como um bloco */
+    font-size: 85px; /* Define o tamanho da fonte do ícone */
+    color: rgb(84, 209, 84); /* Define a cor do ícone */
+    position: absolute; /* Posiciona o ícone de forma absoluta dentro do container */
+    top: 50%; /* Alinha verticalmente o ícone no meio do container */
+    left: 50%; /* Alinha horizontalmente o ícone no meio do container */
+    transform: translate(-50%, -50%); /* Centraliza o ícone dentro do container */
+    cursor: default; /* Define o cursor como padrão sobre o ícone */
+}
+
+.img-box-round {
+    display: inline-block; /* Faz a caixa de imagem se comportar como bloco em linha */
+    border-radius: 100%; /* Arredonda a caixa de imagem para que fique circular */
+    overflow: hidden; /* Garante que o conteúdo que excede o contêiner seja ocultado */
+}
+
+.img-box-label:before {
+    content: ''; /* Adiciona um conteúdo vazio */
+    display: block; /* Faz o pseudo-elemento se comportar como um bloco */
+    width: 50%; /* Define a largura do pseudo-elemento */
+    height: 60px; /* Define a altura do pseudo-elemento */
+    border-right: 2px solid rgb(32, 123, 32); /* Adiciona uma borda à direita do pseudo-elemento */
+    background: transparent; /* Define o fundo do pseudo-elemento como transparente */
+    margin-bottom: 10px; /* Define a margem inferior do pseudo-elemento */
+}
+
+/* Estilos para navegação */
+nav ul, nav ul li {
+    list-style: none; /* Remove o estilo de lista padrão */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+}
+
+/* Estilos específicos */
+body {
+    font-family: 'Open Sans', sans-serif; /* Fonte para o corpo da página */
+    color: rgb(130, 130, 130); /* Cor do texto do corpo */
+    line-height: 25px; /* Altura da linha do corpo */
+}
+
+#header .btn {
+    font-size: 16px; /* Define o tamanho da fonte para botões no cabeçalho */
+    padding: 10px 30px; /* Define o padding dos botões no cabeçalho */
+}
+
+#header .btn:hover {
+    background-color: #865d10; /* Cor de fundo ao passar o mouse sobre o botão do cabeçalho */
+}
+
+#header nav a {
+    display: inline-block; /* Faz os links de navegação se comportarem como blocos em linha */
+    text-decoration: none; /* Remove o sublinhado dos links de navegação */
+    padding: 10px; /* Adiciona padding aos links de navegação */
+    border-radius: 5px; /* Arredonda os cantos dos links de navegação */
+}
+
+#header nav a:hover,
+#header nav a.active {
+    background-color:#9c6402; /* Cor de fundo ao passar o mouse ou quando ativo */
+}
+
+#header h1 {
+    font-size: 54px; /* Define o tamanho da fonte do título no cabeçalho */
+    line-height: 60px; /* Define a altura da linha do título no cabeçalho */
+}
+
+#header {
+    background: radial-gradient( #DB5A09, #753005); /* Imagem de fundo */
+    background-size: cover; /* Ajusta a imagem de fundo */
+    color: #6f23a5; /* Cor do texto */
+    font-size: 24px;
+    width: 100%;
+    height: 50%; /* Altura do cabeçalho */
+    position: relative; /* Posicionamento relativo */
+    padding-top: 30px; /* Espaçamento superior */
+}
+
+#header a {
+    color: #ECA21D; /* Cor dos links no cabeçalho */
+    transition: ease .5s all; /* Define a transição para efeitos de hover */
+}
+
+#header nav {
+    text-align: right; /* Alinha o texto de navegação à direita */
+    font-size: 32px;
+}
+
+#header nav ul, #header nav ul li {
+    display: inline-block; /* Faz os itens de navegação se comportarem como blocos em linha */
+}
+
+#header .title {
+    position: absolute; /* Posiciona o título de forma absoluta dentro do cabeçalho */
+    left: 0; /* Alinha o título à esquerda */
+    top: 50%; /* Alinha o título verticalmente no meio */
+    transform: translate(0, -50%); /* Centraliza o título verticalmente */
+    text-align: center; /* Alinha o texto do título ao centro */
+}
+
+section{
+    height: auto;
+}
+
+.salsicha{
+    background: radial-gradient(#00FFFF, #016b6b);
+
+}
+.velma{
+    background: radial-gradient(#ff7b009f, #795411);
+
+}
+.daphne{
+    background: radial-gradient(#d3bd3f, #c95c03);
+
+}
+.fred{
+    background: radial-gradient(#ff0000, #000000);
+
+}
+
+#copyright {
+    text-align: center; /* Alinha o texto do copyright ao centro */
+    background-color: rgb(34, 34, 34); /* Define a cor de fundo do copyright */
+    padding: 10px; /* Adiciona padding ao copyright */
+}
+
+.scooby_s{
+    color: #ECA21D;
+}
+
+.salsicha_s{
+    color: #FFB700;
+}
+.velma_s{
+    color: #C12200;
+}
+.daphne_s{
+    color: rgb(54, 49, 0);
+}
+.fred_s{
+    color: orangered;
+}
+
+
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#carrossel {
+    position: relative;
+    width: 100vw; /* Largura total da tela */
+    height: 100vh; /* Altura total da tela */
+    overflow: hidden;
+    margin: 0;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    width: 20px; /* Ajuste o tamanho dos botões conforme necessário */
+    height: 20px;
+    background-color: #000000;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.manual-btn.active {
+    background-color: #bb0e0e;
+}
+

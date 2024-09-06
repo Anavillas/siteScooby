@@ -1,0 +1,55 @@
+/* Importa o arquivo de estilos principal */
+@import url('../styles.css');
+
+/* Estiliza o cabeçalho da página inicial */
+
+#header img {
+    width: 150px; /* Ajuste para o tamanho desejado */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+/* Estiliza a seção de clientes */
+#customers {
+    background-color: rgb(242, 242, 242); /* Cor de fundo */
+}
+
+#customers .btn {
+    margin-top: 80px; /* Espaçamento acima do botão */
+    background-color: rgb(220, 220, 220); /* Cor de fundo do botão */
+    color: rgb(130, 130, 130); /* Cor do texto do botão */
+}
+
+/* Estilo do botão ao passar o mouse */
+#customers .btn:hover {
+    background-color: rgb(130, 130, 130); /* Cor de fundo ao passar o mouse */
+    color: rgb(220, 220, 220); /* Cor do texto ao passar o mouse */
+}
+
+/* Estiliza ícones dentro do botão */
+#customers .btn .material-icons {
+    vertical-align: middle; /* Alinha verticalmente os ícones */
+    font-size: 16px; /* Tamanho da fonte dos ícones */
+}
+
+/* Define a largura máxima do contêiner dentro da seção de clientes */
+#customers .container {
+    max-width: 1000px;
+}
+
+/* Estiliza a seção de equipe */
+#team {
+    background-color: rgb(84, 209, 84); /* Cor de fundo */
+    color: white; /* Cor do texto */
+}
+
+/* Adiciona um fundo branco ao pseudo-elemento :after do título na seção de equipe */
+#team h2:after {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Define o tamanho da caixa de imagem redonda na seção de equipe */
+#team .img-box-round {
+    width: 120px; /* Largura da caixa de imagem */
+    height: 120px; /* Altura da caixa de imagem */
+}
